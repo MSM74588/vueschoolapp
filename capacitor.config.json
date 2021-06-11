@@ -1,0 +1,6 @@
+{
+  "appId": "com.msm.app",
+  "appName": "MSM School App",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

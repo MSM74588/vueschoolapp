@@ -1,17 +1,72 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable = no">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
+    <meta name="theme-color" content="#c2f1ba">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+</head>
+
+<body>
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+
+    <div id="ooUpdate">
+        <p>You are Offline/online</p>
+    </div>
     <div id="app"></div>
     <!-- built files will be auto injected -->
-  </body>
+
+    <style>
+        html,
+        body {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        #ooUpdate {
+            padding: 5px 10px 5px 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 10px;
+            background-color: rgb(255, 82, 82);
+            font-family: monospace;
+            border-radius: 5px;
+            font-weight: bold;
+            width: calc(100% - 40px);
+            text-align: center;
+        }
+    </style>
+
+    <script type="text/javascript">
+        const ooUpdate = document.getElementById("ooUpdate");
+
+        if (navigator.onLine) {
+            ooUpdate.textContent = "";
+            ooUpdate.style.display = "None";
+        }
+
+        window.addEventListener("offline", function() {
+            ooUpdate.textContent = "You are Offline ⚠";
+            ooUpdate.style.color = "white"
+            ooUpdate.style.display = "block";
+        });
+
+        window.addEventListener("online", function() {
+            ooUpdate.textContent = "";
+            ooUpdate.style.display = "none";
+        });
+    </script>
+
+</body>
+
 </html>
