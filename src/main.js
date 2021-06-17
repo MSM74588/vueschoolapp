@@ -5,7 +5,7 @@ import router from "./router";
 import Password from "./Password.vue"
 // import './data.js';
 
-var authenticated = false;
+var authenticated = true;
 
 if (authenticated == true) {
     createApp(App).use(router).mount("#app");
@@ -16,6 +16,14 @@ if (authenticated == false || "") {
     createApp(Password).use(router).mount("#app");
     localStorage.clear();
 }
+
+// import { createProvider } from "./vue-apollo";
+
+// new Vue({
+//     router,
+//     apolloProvider: createProvider(),
+//     render: h => h(App)
+// }).$mount("#app");
 
 
 

@@ -103,7 +103,7 @@ export default {
 <style scoped>
 .classes {
   padding: 30px;
-  width: 100%;
+  width: calc(100% - 60px);
 }
 
 .offline{

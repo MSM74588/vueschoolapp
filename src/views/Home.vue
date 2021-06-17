@@ -9,7 +9,11 @@
       </transition>
     </div>
     <div class="hello">
-      <h1>Hello,<br />{{ name }}</h1>
+      <h1 class="bday" v-if="bday">Happy Birthday!,</h1>
+      <i v-if="bday" class="bdaycake"><img src="../assets/cake.png" alt="Happy Bday"></i>
+      <h1 v-else>Hello,</h1>
+
+      <h1 class="nameh1">{{ name }}</h1>
     </div>
     <div class="announcement">
       <a href=""><h1>Announcement</h1></a>
@@ -70,9 +74,11 @@ export default {
     IconButton,
     NoticeCard,
   },
+
   data() {
     return {
-      name: "Anushka Chatterjee",
+      bday: true,
+      name: "MandraSaptak Mandal",
       class: "12",
       sec: "B",
       announcementlink: "",
@@ -118,6 +124,28 @@ export default {
 .slide-enter-active,.slide-leave-active{
   transition: opacity 2.5s ease-out;
 } */
+@media only screen and (max-width: 730px) {
+.home{
+  width: 100vw;
+}
+}
+
+.nameh1{
+  width: 60%;
+}
+.bday{
+  font-size: 2.5em;
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bdaycake img{
+  height: 60px;
+  position: absolute;
+  right: 50px;
+  top: 90px;
+}
 
 
 .school {
@@ -139,13 +167,14 @@ export default {
 }
 
 .hello {
-  padding: 0 0 40px 30px;
+  padding: 0 0 20px 30px;
   font-size: 10px;
 }
 
 .announcement a {
   color: #f08080;
   font-size: 8px;
+  text-decoration: 3px underline;
 }
 
 .announcement {

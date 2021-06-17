@@ -14,16 +14,20 @@
 
   </div>
   <div class="app">
-     <span>
-       <router-view />
 
-          <div id="tab-wrapper">
-            <div id="tab-component">
+  <div class="container">
+  <div class="view">
+      <router-view />
+  </div>
 
+  <div class="tabs">
               <Tab />
-            </div>
-          </div>
-    </span>
+  </div>
+</div>
+
+
+
+
   </div>
 </div>
 
@@ -54,14 +58,35 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
-:root{
-  --width : 73vw
-}
+
 
 * {
   padding: 0;
   margin: 0;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 70px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "view"
+    "tabs";
+  height: 100%;
+}
+
+.tabs { grid-area: tabs;
+   background: #d4fc79;
+
+ }
+
+.view { grid-area: view;;
+ }
+
+
+
 
 #app {
   font-family: "Poppins";
@@ -81,20 +106,8 @@ export default {
  
 }
 
-#tab-component {
-  position: relative;
-  bottom: 0px;
-  left: 0;
-  width: 100%;
 
-}
 
-#tab-wrapper{
-  position: absolute;
-  bottom: 0;
-  width: calc(100vw - var(--width));  
- 
-}
 
 iframe{
   width: 100%;
@@ -113,12 +126,12 @@ iframe{
    display: none;
  }
 
- #tab-wrapper{
+ .tab-wrapper{
    width: 100%;
  }
 
  .app{
- width: 100%;
+ width: 100vw;
 }
 
 }
@@ -128,7 +141,12 @@ iframe{
   flex-direction: row;
 }
 .portal {
-  width: var(--width);
+  flex-grow: 1;
   }
+
+.app{
+  width: 450px;
+}
+
 
 </style>

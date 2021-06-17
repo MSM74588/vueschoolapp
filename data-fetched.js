@@ -1,1 +1,0 @@
-var namefetched = "MSM fetched";

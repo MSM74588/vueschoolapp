@@ -43,7 +43,6 @@ export default {
 }
 
 .tab {
-  height: 70px;
   /* border-radius: 20px 20px 0 0; */
   background-color: #212121;
   margin: 0;

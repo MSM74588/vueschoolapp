@@ -26,16 +26,21 @@ export default {
 </script>
 
 <style scoped>
+
+
+
 .idcard img {
  max-height: 190px;
  max-width: 80vw;
   border-radius: 10px;
   border: 3px rgb(0, 0, 0) solid;
+  
 }
 
 .menu {
   padding: 30px;
   margin-bottom: 0;
+  
 }
 
 a {
