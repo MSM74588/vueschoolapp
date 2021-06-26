@@ -13,7 +13,7 @@
       <i v-if="bday" class="bdaycake"><img src="../assets/cake.png" alt="Happy Bday"></i>
       <h1 v-else>Hello,</h1>
 
-      <h1 class="nameh1">{{ name }}</h1>
+      <h1 class="nameh1" contenteditable="true" >{{ name }}</h1>
     </div>
     <div class="announcement">
       <a href=""><h1>Announcement</h1></a>
@@ -77,7 +77,7 @@ export default {
 
   data() {
     return {
-      bday: true,
+      bday: false, 
       name: "MandraSaptak Mandal",
       class: "12",
       sec: "B",

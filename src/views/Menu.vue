@@ -11,6 +11,9 @@
     <a href=""><h3>🏛 Github Classroom</h3></a><br />
     <a href=""><h3>💵 Fees</h3></a><br />
     <a href=""><h3>🚀 Some tips for Online Classes</h3></a>
+
+    <br>
+    <p>Development of this project is halted for now.</p>
   </div>
 </template>
 
@@ -46,6 +49,13 @@ export default {
 a {
   color: #414141;
   text-decoration: none;
+}
+
+p{
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
+  color: orangered;
 }
 
 </style>
