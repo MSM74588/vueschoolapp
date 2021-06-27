@@ -81,12 +81,12 @@ export default {
       name: "MandraSaptak Mandal",
       class: "12",
       sec: "B",
-      announcementlink: "",
-      notice: "",
+      announcementlink: "https://www.notion.so/Announcements-74aad8100b7e4851821a0dd575bf8036",
+      notice: "https://www.notion.so/Exam-Schedule-cc8d9a9b5dcb487db3205c102bf7352d",
       studentco: "https://mandrasaptak.netlify.app",
-      qb: "",
-      events: "",
-      bookmarks: "",
+      qb: "https://drive.google.com/drive/folders/1vaWARCJMJb5RalC23QsZpeu9AXzwrszH?usp=sharing",
+      events: "https://www.notion.so/Events-46e720416c3844dbac5e60e78a71b884",
+      bookmarks: "https://raindrop.io/msm74588/education-prototype-14514085",
        notices:[
         {
           id: 1,

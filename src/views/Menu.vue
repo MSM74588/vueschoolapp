@@ -1,16 +1,16 @@
 <template>
   <div class="menu">
     <div class="idcard">
-      <img :src="idcard" alt="idcard" />
+      <img :src="idcard" alt="idcard"  />
     </div>
     <br />
 
-    <a href=""><h3>📝 Exam Dates</h3></a><br />
-    <a href=""><h3>🎥 Useful Videos</h3></a>
-    <a href=""><h3>📎 Useful Links</h3></a><br />
-    <a href=""><h3>🏛 Github Classroom</h3></a><br />
-    <a href=""><h3>💵 Fees</h3></a><br />
-    <a href=""><h3>🚀 Some tips for Online Classes</h3></a>
+    <a href="" @click="wip()"><h3>📝 Exam Dates</h3></a><br />
+    <a href="" @click="wip()"><h3>🎥 Useful Videos</h3></a>
+    <a href="" @click="wip()"><h3>📎 Useful Links</h3></a><br />
+    <a href="" @click="wip()"><h3>🏛 Github Classroom</h3></a><br />
+    <a href="" @click="wip()"><h3>💵 Fees</h3></a><br />
+    <a href="" @click="wip()"><h3>🚀 Some tips for Online Classes</h3></a>
 
     <br>
     <p>Development of this project is halted for now.</p>
@@ -22,9 +22,14 @@ export default {
   data() {
     return {
       idcard:
-        "https://mandrasaptak.netlify.app/assets/ID.png",
+        "https://mandrasaptak.netlify.app/assets/lego.png",
     };
   },
+  methods : {
+    wip() {
+      alert("Project is Work in Progress. Values are Unset.");
+    }
+  }
 };
 </script>
 
